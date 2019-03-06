@@ -6,10 +6,26 @@ using System.Threading.Tasks;
 
 namespace C0732156_CSD3354_2_Asignment_2
 {
-    class Program
+    public class DelegateExercises
     {
-        static void Main(string[] args)
+        public delegate void MyDelegate();
+        void Method1()
         {
+            Console.WriteLine("Method1");
+            Console.ReadLine();
+        }
+        public void Method2()
+        {
+            MyDelegate myDelegate = new MyDelegate(Method1);
+            myDelegate();
+        }
+    }
+    class program
+    {
+        public static void Main()
+        {
+            DelegateExercises delegateExercises = new DelegateExercises();
+            delegateExercises.Method2();
         }
     }
 }
