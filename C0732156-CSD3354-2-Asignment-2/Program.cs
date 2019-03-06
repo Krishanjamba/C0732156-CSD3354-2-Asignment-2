@@ -17,12 +17,12 @@ namespace C0732156_CSD3354_2_Asignment_2
         public void Method2()
         {
             MyDelegate myDelegate = new MyDelegate(Method1);
-            myDelegate();
+            myDelegate(50);
         }
     }
     class program
     {
-        public static void Main()
+        public static void Main(string[] args)
         {
             DelegateExercises delegateExercises = new DelegateExercises();
             delegateExercises.Method2();
